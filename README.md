@@ -1,2 +1,8 @@
 # demoqa-elements
-Test automation on DemoQA website Elements section 
+
+## Usage
+
+## Dependencies
+
+## License
+This project is licensed under the [MIT License](https://github.com/jonathanvieri/demoqa-elements/blob/main/LICENSE) 
