@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ed0da488-a775-481b-9ad1-04e80e9e85de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/driver/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Elements.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,13 +87,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665599077403</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Text Box test, update chromedriver, and add dependencies.">
+      <created>1666087395610</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666087395610</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Add ChromeDriver file" />
     <MESSAGE value="Add elements file, setup and finish method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add elements file, setup and finish method." />
+    <MESSAGE value="Add Text Box test, update chromedriver, and add dependencies." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Text Box test, update chromedriver, and add dependencies." />
   </component>
 </project>

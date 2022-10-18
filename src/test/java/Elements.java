@@ -57,13 +57,25 @@ public class Elements {
     }
 
     @Test(description = "Go to Check Box section and check some boxes")
-    public void step3() throws InterruptedException {
+    public void step3() {
+        driver.findElement(By.xpath("//li//span[text()='Check Box']")).click();
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@class='main-header' and text()='Check Box']")).isDisplayed(),
+                "Check Box header not found / not in Check Box page");
 
+        driver.findElement(By.cssSelector(".rct-collapse")).click();    // Toggle the list
+        driver.findElement(By.xpath("//label[@for='tree-node-downloads']//span[@class='rct-checkbox']")).click();
+
+        // Verify the values
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@id='result' and .//span[text()='downloads']]")).isDisplayed(),
+                "Downloads is not selected");
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@id='result' and .//span[text()='wordFile']]")).isDisplayed(),
+                "wordFile is not selected");
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@id='result' and .//span[text()='excelFile']]")).isDisplayed(),
+                "excelFile is not selected");
     }
 
     @AfterTest(description = "Finished the test, cleaning up ChromeDriver instance")
     public void finish() {
-       driver.close();
        driver.quit();
     }
 }
