@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed0da488-a775-481b-9ad1-04e80e9e85de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Elements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/driver/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/driver/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Elements.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,12 +82,20 @@
       <option name="project" value="LOCAL" />
       <updated>1665508469634</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add elements file, setup and finish method.">
+      <created>1665599077403</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665599077403</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Add ChromeDriver file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ChromeDriver file" />
+    <MESSAGE value="Add elements file, setup and finish method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add elements file, setup and finish method." />
   </component>
 </project>
