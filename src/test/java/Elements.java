@@ -74,6 +74,24 @@ public class Elements {
                 "excelFile is not selected");
     }
 
+    @Test(description = "Go to Radio Button section and press the buttons")
+    public void step4() {
+        driver.findElement(By.xpath("//li//span[text()='Radio Button']")).click();
+
+        // Click buttons and verify the value
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+
+        WebElement element = driver.findElement(By.id("yesRadio"));
+        executor.executeScript("arguments[0].click();", element);
+        Assert.assertTrue(driver.findElement(By.xpath("//span[@class='text-success' and text()='Yes']")).isDisplayed(),
+                "Yes is selected but text not found");
+
+        element = driver.findElement(By.id("impressiveRadio"));
+        executor.executeScript("arguments[0].click();", element);
+        Assert.assertTrue(driver.findElement(By.xpath("//span[@class='text-success' and text()='Impressive']")).isDisplayed(),
+                "Impressive is selected but text not found");
+    }
+
     @AfterTest(description = "Finished the test, cleaning up ChromeDriver instance")
     public void finish() {
        driver.quit();
