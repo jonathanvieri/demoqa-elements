@@ -1,9 +1,14 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.*;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 public class Elements {
 
@@ -131,6 +136,31 @@ public class Elements {
                 "Salary not found");
         Assert.assertTrue(driver.findElement(By.xpath("//div[contains(text(), '" + department + "')]")).isDisplayed(),
                 "Department not found");
+    }
+
+    @Test(description = "Go to Buttons section and click the buttons")
+    public void step6() {
+        driver.findElement(By.xpath("//li//span[text()='Buttons']")).click();
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@class='main-header' and text()='Buttons']")).isDisplayed(),
+                "Web Tables header not found / not in Web Tables page");
+
+        // Double-click the first button using Actions class
+        Actions actions = new Actions(driver);
+        WebElement doubleButton = driver.findElement(By.id("doubleClickBtn"));
+        actions.doubleClick(doubleButton).perform();
+        Assert.assertTrue(driver.findElement(By.id("doubleClickMessage")).isDisplayed(),
+                "Double click message is not present");
+
+        // Right-click the second button
+        WebElement rightClickButton = driver.findElement(By.id("rightClickBtn"));
+        actions.contextClick(rightClickButton).perform();
+        Assert.assertTrue(driver.findElement(By.id("rightClickMessage")).isDisplayed(),
+                "Right click message is not present");
+
+        // Click the dynamic button by searching for its exact text
+        driver.findElement(By.xpath("//button[text()='Click Me']")).click();
+        Assert.assertTrue(driver.findElement(By.id("dynamicClickMessage")).isDisplayed(),
+                "Dynamic click message is not present");
     }
 
     @AfterTest(description = "Finished the test, cleaning up ChromeDriver instance")
